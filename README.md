@@ -52,7 +52,7 @@ Here's how it works: the research loop operates as a stateful, four-stage closed
 
 So it begins with the hypothesis generator (**Qwen 9B uncensored**), which generates inductive hypotheses, selects multi-dimensional factor inputs, and then writes continuous raw factor signals:
 
-$$S_t = \tanh\left(w_1 \cdot \text{term\_mom}_t + w_2 \cdot \text{term\_vol}_t + \dots + w_n \cdot \text{term\_N}_t\right)$$
+$$S_t = \tanh\left(w_1 \cdot \mathrm{mom}_t + w_2 \cdot \mathrm{vol}_t + \dots + w_n \cdot \mathrm{term}_{n, t}\right)$$
 
 where $S_t \in [-1.0, 1.0]$.
 
@@ -200,6 +200,8 @@ During the severe altcoin correction in December 2024, unconstrained Buy & Hold 
 
 ### The Retirement Decision
 During subsequent live forward evaluation across expanded market regimes, unconstrained multi-token exposure experienced elevated drawdowns during macro altcoin corrections. Rather than adjusting parameters to curve-fit recent drawdowns, we adhered to our pre-committed statistical protocol: **the strategy was formally retired**. The purpose of the research loop was not to force a strategy into production, but to build an un-hackable machine that tells the truth about alpha decay.
+
+But what wasn't retired was the amount of research and learning I got from this :)
 
 ---
 
